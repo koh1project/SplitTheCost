@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="roundingValues">
+        <item>1円</item>
+        <item>10円</item>
+        <item>100円</item>
+        <item>500円</item>
+        <item>1000円</item>
+    </string-array>
+
+
+</resources>

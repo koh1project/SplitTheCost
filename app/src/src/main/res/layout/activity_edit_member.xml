@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditMemberActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/member_info"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/name"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/groupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameText"
+        android:layout_alignRight="@id/nameText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/group_c"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/positionText"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupText"
+        android:layout_alignRight="@id/groupText"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/position_c"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/nameEdit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameText"
+        android:layout_alignBottom="@id/nameText"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_toRightOf="@id/nameText"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/groupSpinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/groupText"
+   android:layout_toRightOf="@id/groupText"
+    />
+
+    <Spinner
+        android:id="@+id/positionSpinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/positionText"
+        android:layout_alignLeft="@id/groupSpinner2"
+
+    />
+
+    <Button
+        android:id="@+id/addGroupButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/saveButton"
+        android:layout_marginRight="-23dp"
+        android:layout_above="@id/addPositionButton2"
+        android:onClick="onClickAddGroupButton"
+        android:layout_marginBottom="15dp"
+        android:text="@string/add_group" />
+
+    <Button
+        android:id="@+id/addPositionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_above="@id/saveButton"
+        android:onClick="onClickAddPositionButton"
+       android:layout_alignRight="@id/saveButton"
+        android:layout_marginRight="-10dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/add_position" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginBottom="105dp"
+        android:onClick="onClickSaveButton"
+        android:text="@string/save_button" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/saveButton"
+        android:layout_alignTop="@id/saveButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="onClickDeleteButton"
+        android:text="@string/delete_button" />
+
+</RelativeLayout>

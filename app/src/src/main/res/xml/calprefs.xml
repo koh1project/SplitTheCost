@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="計算設定">
+        <ListPreference
+            android:entries="@array/roundingValues"
+            android:entryValues="@array/roundingValues"
+            android:key="roundingValue"
+            android:summary="端数処理を行う単位を設定します"
+
+            android:title="端数の数値" />
+
+        <ListPreference
+            android:entries="@array/roundingMethods"
+            android:entryValues="@array/roundingMethods"
+            android:key="roundingMethod"
+            android:summary="端数処理の方法を設定します"
+            android:title="処理方法" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

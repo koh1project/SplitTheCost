@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageListActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="50dp"
+        android:text="メンバー情報管理"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/memberListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView8"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="89dp"
+        android:onClick="onClickMemberListButton"
+        android:text="メンバー情報一覧" />
+
+    <Button
+        android:id="@+id/addMemberButton"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/memberListButton"
+        android:layout_alignLeft="@id/memberListButton"
+        android:layout_marginTop="44dp"
+        android:onClick="onClickAddMemberButton"
+        android:text="メンバー登録" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="139dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/addMemberButton"
+android:layout_alignLeft="@id/addMemberButton"
+
+        android:layout_marginTop="44dp"
+        android:onClick="onClickGroupButton"
+        android:text="グループ情報" />
+</RelativeLayout>

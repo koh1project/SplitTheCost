@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/goSimpleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="245dp"
+        android:onClick="onClickGoSimpleButton"
+        android:text="簡易計算" />
+
+    <Button
+        android:id="@+id/goSpecialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/goSimpleButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="153dp"
+        android:onClick="onClickGoSpecialButton"
+        android:text="詳細計算" />
+
+    <Button
+        android:id="@+id/manageButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/goSpecialButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="59dp"
+        android:onClick="OnClickManageButton"
+        android:text="メンバー管理"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="130dp"
+        android:layout_toEndOf="@+id/goSimpleButton"
+        android:text="割り勘アプリ"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/detailText"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/goSimpleButton"
+        android:layout_alignTop="@id/goSimpleButton"
+        android:layout_alignBottom="@id/goSimpleButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginBottom="13dp"
+        android:text="人数を指定した簡単な計算" />
+
+    <TextView
+        android:id="@+id/manageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/manageButton"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/manageButton"
+        android:text="メンバー情報やグループ情報を管理" />
+
+    <TextView
+        android:id="@+id/specialText"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/detailText"
+        android:layout_alignTop="@id/goSpecialButton"
+
+        android:layout_alignBottom="@id/goSpecialButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="151dp"
+        android:text="メンバーや金額を指定した計算 \n チェックリストを作成" />
+
+    <ImageView
+        android:id="@+id/cheer"
+        android:layout_width="85dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="30dp"
+        android:rotation="330"
+        android:src="@drawable/drink1" />
+
+    <ImageView
+        android:id="@+id/calc"
+        android:layout_width="78dp"
+        android:layout_height="87dp"
+
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/textView25"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:rotation="15"
+        android:src="@drawable/calc" />
+
+</RelativeLayout>

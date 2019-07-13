@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="specialAccount">
+        <item>円</item>
+        <item>円引き</item>
+    </string-array>
+</resources>

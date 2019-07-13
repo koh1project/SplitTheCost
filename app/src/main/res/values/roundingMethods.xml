@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="roundingMethods">
+        <item>切り上げ</item>
+        <item>切り捨て</item>
+        <item>四捨五入</item>
+    </string-array>
+
+
+</resources>
+
+
+

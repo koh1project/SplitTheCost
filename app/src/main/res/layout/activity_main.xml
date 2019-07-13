@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/goSimpleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:onClick="onClickGoSimpleButton"
+        android:text="@string/simple_account"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/goSpecialButton"
+        app:layout_constraintEnd_toEndOf="@+id/manageButton"
+        app:layout_constraintRight_toLeftOf="@id/detailText"
+        app:layout_constraintTop_toBottomOf="@id/textView25" />
+
+    <Button
+        android:id="@+id/goSpecialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickGoSpecialButton"
+        android:text="@string/detailed_account"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/manageButton"
+        app:layout_constraintEnd_toEndOf="@+id/manageButton"
+        app:layout_constraintTop_toBottomOf="@id/goSimpleButton" />
+
+    <Button
+        android:id="@+id/manageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="OnClickManageButton"
+        android:text="@string/member_manage"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goSpecialButton"
+        tools:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/goSimpleButton"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cheer" />
+
+    <TextView
+        android:id="@+id/detailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simple_account_description"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/goSimpleButton"
+        app:layout_constraintLeft_toRightOf="@id/goSimpleButton"
+        app:layout_constraintStart_toStartOf="@id/manageText" />
+
+    <TextView
+        android:id="@+id/manageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/member_manage_description"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/manageButton"
+        app:layout_constraintLeft_toRightOf="@id/manageButton" />
+
+    <TextView
+        android:id="@+id/specialText"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:text="@string/detailed_account_description"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/goSpecialButton"
+        app:layout_constraintStart_toStartOf="@id/manageText"
+        app:layout_constraintTop_toTopOf="@id/goSpecialButton" />
+
+    <ImageView
+        android:id="@+id/cheer"
+        android:layout_width="85dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:rotation="330"
+        android:src="@drawable/drink1"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintRight_toLeftOf="@id/calc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/calc"
+        android:layout_width="78dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="48dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:rotation="15"
+        android:src="@drawable/calc"
+        app:layout_constraintBottom_toBottomOf="@id/cheer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cheer"
+        tools:layout_constraintTop_toTopOf="@id/cheer" />
+
+</android.support.constraint.ConstraintLayout>

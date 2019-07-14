@@ -173,6 +173,18 @@ public class SimpleCalculationActivity extends Activity {
             return;
         }
 
+        if(total < discount){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false);
+            builder.setIcon(android.R.drawable.ic_dialog_info);
+            builder.setTitle(getString(R.string.error));
+            builder.setMessage(getString(R.string.error_over_discount));
+            builder.setPositiveButton(getString(R.string.positive_button), null);
+            builder.show();
+            return;
+        }
+
+
         for (int i = 0; i < specialPrices.size(); i++) {
             if (numSpecials.get(i) > 0 || specialPrices.get(i) > 0) {
                 Log.d("特別価格", "処理を開始　分岐前");
@@ -202,11 +214,24 @@ public class SimpleCalculationActivity extends Activity {
             }
         }
 
+        if(total < 0){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false);
+            builder.setIcon(android.R.drawable.ic_dialog_info);
+            builder.setTitle(getString(R.string.error));
+            builder.setMessage(getString(R.string.error_minus));
+            builder.setPositiveButton(getString(R.string.positive_button), null);
+            builder.show();
+            return;
+        }
+
+
         int p = cal.getPerMember(total, discount, numMember, roundingMethod,
                 roundingValue);
         NumberFormat formatter = new DecimalFormat("#,###");
         String price = formatter.format(p);
         perMember.setText(price + getString(R.string.currency));
-
     }
+
+
 }

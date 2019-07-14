@@ -82,10 +82,10 @@ public class SpecialCalculationActivity extends Activity {
         numSpecial3.setText(checkListDao.getCountSpecials(3));
 
         //一度計算されていれば「一時保存情報を呼び出し」ボタンを表示する
-        if(calculated){
+        if (calculated) {
             tmpButton.setVisibility(View.VISIBLE);
         }
-        if(checkListDao.getMembers().length == 0){
+        if (checkListDao.getMembers().length == 0) {
             tmpButton.setVisibility(View.GONE);
         }
     }
@@ -116,20 +116,20 @@ public class SpecialCalculationActivity extends Activity {
                         if (n.contains(":")) {
                             int i = n.indexOf(":");
                             name = n.substring(0, i);
-                        //    Log.d("置き換えたもの", name);
-                        //    Log.d("空白がある", toString().valueOf(name.contains("")));
+                            //    Log.d("置き換えたもの", name);
+                            //    Log.d("空白がある", toString().valueOf(name.contains("")));
                         } else {
                             name = n;
-                        //    Log.d("置き換えなかった", name);
+                            //    Log.d("置き換えなかった", name);
                         }
 
 
                         if (isChecked) {
                             checkListDao.updateSpecial(name, specialId);
-                        //    Log.d("ダイアログchecked", name);
+                            //    Log.d("ダイアログchecked", name);
                         } else {
                             checkListDao.removeSpecial(name);
-                        //    Log.d("ダイアログELSE", name);
+                            //    Log.d("ダイアログELSE", name);
                         }
                     }
                 });
@@ -163,19 +163,19 @@ public class SpecialCalculationActivity extends Activity {
                         if (n.contains(":")) {
                             int i = n.indexOf(":");
                             name = n.substring(0, i);
-                        //    Log.d("置き換えたもの", name);
-                        //    Log.d("空白がある", toString().valueOf(name.contains("")));
+                            //    Log.d("置き換えたもの", name);
+                            //    Log.d("空白がある", toString().valueOf(name.contains("")));
                         } else {
                             name = n;
-                        //    Log.d("置き換えなかった", name);
+                            //    Log.d("置き換えなかった", name);
                         }
 
                         if (isChecked) {
                             checkListDao.updateSpecial(name, specialId);
-                        //    Log.d("ダイアログchecked", name);
+                            //    Log.d("ダイアログchecked", name);
                         } else {
                             checkListDao.removeSpecial(name);
-                        //    Log.d("ダイアログELSE", name);
+                            //    Log.d("ダイアログELSE", name);
                         }
                     }
                 });
@@ -213,19 +213,19 @@ public class SpecialCalculationActivity extends Activity {
                         if (n.contains(":")) {
                             int i = n.indexOf(":");
                             name = n.substring(0, i);
-                        //    Log.d("置き換えたもの", name);
-                        //    Log.d("空白がある", toString().valueOf(name.contains("")));
+                            //    Log.d("置き換えたもの", name);
+                            //    Log.d("空白がある", toString().valueOf(name.contains("")));
                         } else {
                             name = n;
-                        //    Log.d("置き換えなかった", name);
+                            //    Log.d("置き換えなかった", name);
                         }
 
                         if (isChecked) {
                             checkListDao.updateSpecial(name, specialId);
-                        //    Log.d("ダイアログchecked", name);
+                            //    Log.d("ダイアログchecked", name);
                         } else {
                             checkListDao.removeSpecial(name);
-                        //    Log.d("ダイアログELSE", name);
+                            //    Log.d("ダイアログELSE", name);
                         }
                     }
                 });
@@ -265,15 +265,15 @@ public class SpecialCalculationActivity extends Activity {
 
         //エラー対策
         int count_member = Integer.parseInt(numMember.getText().toString());
-        if(count_member == 0){
+        if (count_member == 0) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(false);
             builder.setIcon(android.R.drawable.ic_dialog_info);
             builder.setTitle(getString(R.string.error_numMember));
-            builder.setPositiveButton(getString(R.string.positive_button),null);
+            builder.setPositiveButton(getString(R.string.positive_button), null);
             builder.show();
 
-        }else if (total < roundingValue) {
+        } else if (total < roundingValue) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(false);
             builder.setIcon(android.R.drawable.ic_dialog_info);
@@ -283,45 +283,53 @@ public class SpecialCalculationActivity extends Activity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     //設定画面に遷移させる場合には実行
-                //    Intent i = new Intent(SpecialCalculationActivity.this, CalPrefsActivity.class);
-                //    startActivity(i);
+                    //    Intent i = new Intent(SpecialCalculationActivity.this, CalPrefsActivity.class);
+                    //    startActivity(i);
                 }
             });
             builder.show();
             return;
-        } else{
+        } else if (total < discount) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false);
+            builder.setIcon(android.R.drawable.ic_dialog_info);
+            builder.setTitle(getString(R.string.error));
+            builder.setMessage(getString(R.string.error_over_discount));
+            builder.setPositiveButton(getString(R.string.positive_button), null);
+            builder.show();
+            return;
+        } else {
+            total = Integer.parseInt(totalEdit.getText().toString());
+            discount = Integer.parseInt(discountEdit.getText().toString());
 
-        total = Integer.parseInt(totalEdit.getText().toString());
-        discount = Integer.parseInt(discountEdit.getText().toString());
+            Intent i = new Intent(this, CheckListActivity.class);
 
-        Intent i = new Intent(this,CheckListActivity.class);
+            String[] waySpecials = {spSpinner1.getSelectedItem().toString()
+                    , spSpinner2.getSelectedItem().toString()
+                    , spSpinner3.getSelectedItem().toString()};
+            String[] numSpecials = {numSpecial1.getText().toString(),
+                    numSpecial2.getText().toString(),
+                    numSpecial3.getText().toString()};
+            String[] priceSpecials = {specialPrice1.getText().toString()
+                    , specialPrice2.getText().toString(),
+                    specialPrice3.getText().toString()};
 
-        String[] waySpecials = {spSpinner1.getSelectedItem().toString()
-                , spSpinner2.getSelectedItem().toString()
-                , spSpinner3.getSelectedItem().toString()};
-        String[] numSpecials = {numSpecial1.getText().toString(),
-                numSpecial2.getText().toString(),
-                numSpecial3.getText().toString()};
-        String[] priceSpecials = {specialPrice1.getText().toString()
-                , specialPrice2.getText().toString(),
-                specialPrice3.getText().toString()};
+            i.putExtra(getString(R.string.i_param_way), waySpecials);
+            i.putExtra(getString(R.string.i_param_num_special), numSpecials);
+            i.putExtra(getString(R.string.i_param_price_special), priceSpecials);
+            i.putExtra(getString(R.string.i_param_total), total);
+            i.putExtra(getString(R.string.i_param_discount), discount);
+            i.putExtra(getString(R.string.i_param_num_member), numMember.getText().toString());
+            i.putExtra(getString(R.string.i_param_rounding_method),
+                    prefs.getString(getString(R.string.i_param_rounding_method), ""));
+            i.putExtra(getString(R.string.i_param_rounding_value),
+                    prefs.getString(getString(R.string.i_param_rounding_value), ""));
 
-        i.putExtra(getString(R.string.i_param_way), waySpecials);
-        i.putExtra(getString(R.string.i_param_num_special), numSpecials);
-        i.putExtra(getString(R.string.i_param_price_special), priceSpecials);
-        i.putExtra(getString(R.string.i_param_total), total);
-        i.putExtra(getString(R.string.i_param_discount), discount);
-        i.putExtra(getString(R.string.i_param_num_member), numMember.getText().toString());
-        i.putExtra(getString(R.string.i_param_rounding_method),
-                prefs.getString(getString(R.string.i_param_rounding_method), ""));
-        i.putExtra(getString(R.string.i_param_rounding_value),
-                prefs.getString(getString(R.string.i_param_rounding_value), ""));
+            i.putExtra(getString(R.string.i_param_new_calculation), true);
 
-        i.putExtra(getString(R.string.i_param_new_calculation), true);
-
-        calculated = true; //「一時保存---」ボタンを表示させる
-        Log.d("Intent","INTENT:"+ i);
-        startActivity(i);
+            calculated = true; //「一時保存---」ボタンを表示させる
+            Log.d("Intent", "INTENT:" + i);
+            startActivity(i);
         }
     }
 

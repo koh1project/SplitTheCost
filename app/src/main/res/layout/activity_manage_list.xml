@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,38 +11,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="50dp"
         android:text="@string/member_info_manage"
-        android:textSize="24sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/memberListButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/memberListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView8"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="89dp"
         android:onClick="onClickMemberListButton"
-        android:text="@string/member_list" />
+        android:text="@string/member_list"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/addMemberButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8" />
 
     <Button
         android:id="@+id/addMemberButton"
-        android:layout_width="135dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/memberListButton"
-        android:layout_alignLeft="@id/memberListButton"
-        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="onClickAddMemberButton"
-        android:text="@string/register_member" />
+        android:text="@string/register_member"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/groupInfo"
+        app:layout_constraintStart_toStartOf="@id/memberListButton"
+        app:layout_constraintTop_toBottomOf="@id/memberListButton" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_below="@id/addMemberButton"
-        android:layout_alignLeft="@id/addMemberButton"
-        android:layout_marginTop="44dp"
+        android:id="@+id/groupInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:onClick="onClickGroupButton"
-        android:text="@string/group_info" />
-</RelativeLayout>
+        android:text="@string/group_info"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/memberListButton"
+        app:layout_constraintTop_toBottomOf="@id/addMemberButton" />
+</android.support.constraint.ConstraintLayout>

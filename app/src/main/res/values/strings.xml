@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">割り勘アプリ</string>
     <string name="special">別会計の方法を選んでください</string>
-    <string name="error_fraction_bigger">計算設定の「端数の数値」は、合計金額を超えないようにしてください</string>
-    <string name="error">エラー</string>
-    <string name="error_numMember">参加者を1人以上設定してください</string>
     <string name="special_account">特別会計</string>
     <string name="simple_account">簡易会計</string>
     <string name="detailed_account">詳細会計</string>
@@ -42,11 +39,16 @@
     <string name="complete_modification">変更完了しました</string>
     <string name="already_added">は既に登録されています</string>
 
+    <!--　エラー関係 -->
+    <string name="error_fraction_bigger">計算設定の「端数の数値」は、合計金額を超えないようにしてください</string>
+    <string name="error">エラー</string>
+    <string name="error_numMember">参加者を1人以上設定してください</string>
+    <string name="error_over_discount">値引きの金額が合計金額を上回っています。</string>
+    <string name="error_minus">計算結果が0円未満になります。割引額などを見直してください。</string>
 
     <!--　メンバー関係 -->
     <string name="add_member">新規メンバー追加</string>
     <string name="name">名前:</string>
-
     <string name="hint_edit_name">名前を入力してください:</string>
     <string name="register_participants">参加者登録</string>
     <string name="member_info">メンバー情報</string>

@@ -50,7 +50,7 @@ public class EditMemberActivity extends Activity {
                     .simple_spinner_dropdown_item
                     , typesDao.getAllGroups());
             Spinner groupSpinner = findViewById(R.id.groupSpinner2);
-
+            groupAdapter.setDropDownViewResource(R.layout.spinner_doropdown_item);
             groupSpinner.setAdapter(groupAdapter);
 
             if (member.getGroupName() != null) {
@@ -64,6 +64,7 @@ public class EditMemberActivity extends Activity {
                     .simple_spinner_dropdown_item
                     , typesDao.getAllPositions());
             Spinner positionSpinner = findViewById(R.id.positionSpinner2);
+            positionAdapter.setDropDownViewResource(R.layout.spinner_doropdown_item);
             positionSpinner.setAdapter(positionAdapter);
 
             if (member.getPositionName() != null) {

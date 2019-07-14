@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
             sb.append("\n"+getString(R.string.setting_request_end));
 
             builder.setMessage(sb);
-            builder.setPositiveButton(R.string.currency, new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(R.string.positive_button, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Intent i = new Intent(MainActivity.this ,

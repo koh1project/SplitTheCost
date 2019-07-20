@@ -4,6 +4,7 @@
 - [メイン機能について](#メイン機能について)
 - [ビルドまでの流れ](#ビルドまでの流れ)
 - [apkファイルのダウンロード](#apkファイルのダウンロード)
+- [制作環境](#制作環境)
 
 ## アプリケーションついて
 割り勘をした時に1人あたりの金額を計算するアプリです。  
@@ -84,3 +85,12 @@ WindowsOSのbuild方法
 ## apkファイルのダウンロード
 上記のビルドを実行後`/SplitTheCost/app/build/outputs/apk/debug/`に`app-debug.apk`が作成されます。  
 作成されたapkファイルをファイル転送やadbコマンドなどで、Android端末にダウンロードしてください。
+
+  
+## 制作環境  
+|    |    |
+|---:|:---|
+|**OS**|Windows 10<br>Ubuntu 18.04.2|  
+|**Tool**|Android Studio 3.4.2<br>Compile Sdk Version:28(API:Android9.0(Pie))|  
+|**Java**|1.8.0_152|
+|**Git**|Git bash<br>Command Line|

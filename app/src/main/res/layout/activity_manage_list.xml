@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/member_info_manage"
-        android:textSize="30sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@id/memberListButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:onClick="onClickMemberListButton"
         android:text="@string/member_list"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/addMemberButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,24 +32,26 @@
 
     <Button
         android:id="@+id/addMemberButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="onClickAddMemberButton"
         android:text="@string/register_member"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/groupInfo"
+        app:layout_constraintEnd_toEndOf="@id/memberListButton"
         app:layout_constraintStart_toStartOf="@id/memberListButton"
         app:layout_constraintTop_toBottomOf="@id/memberListButton" />
 
     <Button
         android:id="@+id/groupInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:onClick="onClickGroupButton"
         android:text="@string/group_info"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/memberListButton"
         app:layout_constraintStart_toStartOf="@id/memberListButton"
         app:layout_constraintTop_toBottomOf="@id/addMemberButton" />
 </android.support.constraint.ConstraintLayout>

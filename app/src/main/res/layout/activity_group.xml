@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:text="@string/member_attribute"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/groupListButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,13 +20,14 @@
 
     <Button
         android:id="@+id/groupListButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="onClickGroupListButton"
         android:text="@string/group_list"
-        android:textSize="23sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/positionListButton"
 
+        app:layout_constraintEnd_toEndOf="@id/positionListButton"
         app:layout_constraintStart_toStartOf="@id/positionListButton"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
@@ -38,7 +39,7 @@
         android:layout_marginBottom="40dp"
         android:onClick="onClickPositionListButton"
         android:text="@string/position_list"
-        android:textSize="23sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

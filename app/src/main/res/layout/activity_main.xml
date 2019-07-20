@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/goSimpleButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:onClick="onClickGoSimpleButton"
@@ -17,17 +17,19 @@
         app:layout_constraintBottom_toTopOf="@id/goSpecialButton"
         app:layout_constraintEnd_toEndOf="@+id/manageButton"
         app:layout_constraintRight_toLeftOf="@id/detailText"
+        app:layout_constraintStart_toStartOf="@id/manageButton"
         app:layout_constraintTop_toBottomOf="@id/textView25" />
 
     <Button
         android:id="@+id/goSpecialButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="onClickGoSpecialButton"
         android:text="@string/detailed_account"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@id/manageButton"
         app:layout_constraintEnd_toEndOf="@+id/manageButton"
+        app:layout_constraintStart_toStartOf="@id/manageButton"
         app:layout_constraintTop_toBottomOf="@id/goSimpleButton" />
 
     <Button

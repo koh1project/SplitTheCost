@@ -20,6 +20,8 @@
     <string name="delete_button">削除</string>
     <string name="return_button">戻る</string>
     <string name="register">登録</string>
+    <string name="zero"></string>
+
 
 
     <string name="setting_request_title">設定登録が必要です</string>
@@ -48,8 +50,8 @@
 
     <!--　メンバー関係 -->
     <string name="add_member">新規メンバー追加</string>
-    <string name="name">名前:</string>
-    <string name="hint_edit_name">名前を入力してください:</string>
+    <string name="name">名前</string>
+    <string name="hint_edit_name">名前を入力してください</string>
     <string name="register_participants">参加者登録</string>
     <string name="member_info">メンバー情報</string>
     <string name="member_attribute">メンバー属性情報</string>

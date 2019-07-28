@@ -19,8 +19,12 @@
 ##  ビルドまでの流れ  
 ローカル環境に本プロジェクトをクローンし、ビルドを実行してください。  
 
-　　
-  
+**※ビルドができない場合**
+本プロジェクトSplitTheCost直下のSplitTheCost.apkを端末にインストールしてください。(2019/07/28更新分反映)  　
+SplitTheCost/SplitTheCost.apk  
+最新の状態が反映されていない場合があるため、更新日のご確認をお願いします。  
+
+  　  
 ### プロジェクトのクローン  
 `git clone https://github.com/koh1project/SplitTheCost.git`  
 

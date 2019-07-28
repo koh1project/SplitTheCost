@@ -10,7 +10,6 @@ gen/
 release/
 out/
 
-*.apk
 *.ap_
 *.aab
 

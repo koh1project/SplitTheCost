@@ -8,10 +8,14 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/member_attribute"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/groupListButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +25,14 @@
     <Button
         android:id="@+id/groupListButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+
         android:onClick="onClickGroupListButton"
         android:text="@string/group_list"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/positionListButton"
-
         app:layout_constraintEnd_toEndOf="@id/positionListButton"
         app:layout_constraintStart_toStartOf="@id/positionListButton"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
@@ -34,9 +40,12 @@
     <Button
 
         android:id="@+id/positionListButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="60dp"
         android:onClick="onClickPositionListButton"
         android:text="@string/position_list"
         android:textSize="18sp"
